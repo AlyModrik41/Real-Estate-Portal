@@ -5,7 +5,15 @@
 #include "admin.h"
 #include "properties.h"
 
+/*Edits:
+1- property list type(unorderd map of id's and properties)
 
+2- property atributes
+
+3-add property at id 999 (admin's id)
+
+
+ */
 admin::admin() {
 
 }
