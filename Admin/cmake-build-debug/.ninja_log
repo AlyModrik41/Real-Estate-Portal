@@ -1,6 +1,0 @@
-# ninja log v6
-1	127	1745091760564775511	untitled_autogen/timestamp	eb7e912bfd26523
-1	127	1745091760564775511	untitled_autogen/mocs_compilation.cpp	eb7e912bfd26523
-128	1029	1745091760573150084	CMakeFiles/untitled.dir/main.cpp.o	8eb1ec7bda12a6e6
-128	162	1745091760572945747	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o	55fb7adbb7019812
-1031	1184	1745091761475872800	untitled	7fdf9a5c2aff340
