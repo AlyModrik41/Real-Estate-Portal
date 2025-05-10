@@ -29,7 +29,7 @@ public:
   void set_rooms(int);
   void set_furniture(bool);
   void set_approval(bool);
-  void set_highlight(bool H);
+  void set_highlight(bool );
 
   int get_price() const;
   bool get_highlight() const;

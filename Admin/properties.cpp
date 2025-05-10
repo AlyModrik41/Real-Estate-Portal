@@ -4,47 +4,96 @@
 
 #include "properties.h"
 
-properties::properties():price(0),status(false),owner("company"),highlighted(false){
+
+
+properties::properties() :price(0), status(false), owner("company") {
 
 }
 
-properties::properties(int price):price(price),status(false),owner("company"),highlighted(false){
+properties::properties(int price) : price(price), status(false), owner("company") {
 
+}
+
+properties::properties(int price, int rooms, int area, bool furniture, string owner, string location)
+{
+    this->price = price;
+    this->rooms = rooms;
+    this->area = area;
+    this->furniture = furniture;
+    this->owner = owner;
+    this->location = location;
+    this->status = false;
 }
 
 properties::~properties() {
 }
 
 void properties::set_price(int price) {
-    this->price=price;
+    this->price = price;
 }
 
-void properties::set_highlight(bool H) {
- highlighted=H;
-}
-void properties::set_status(bool status){
-this->status=status;
+void properties::set_status(bool status) {
+    this->status = status;
 }
 
 void properties::set_owner(string owner) {
-    this->owner=owner;
+    this->owner = owner;
 }
 
 void properties::set_location(string location) {
-    this->location=location;
+    this->location = location;
 }
 
-int properties::get_price() const{
-  return price;
+void properties::set_area(int area)
+{
+    this->area = area;
 }
 
-string properties::get_owner() const{
+void properties::set_rooms(int rooms)
+{
+    this->rooms = rooms;
+}
+
+void properties::set_furniture(bool furniture)
+{
+    this->furniture = furniture;
+}
+void properties::set_approval(bool approval ) {
+    approved = approval;
+}
+void properties::set_highlight(bool h) {
+    highlighted=h;
+}
+
+
+int properties::get_price() const {
+    return price;
+}
+bool properties::get_status() const
+{
+    return status;
+}
+string properties::get_owner() const {
     return owner;
 }
-string properties::get_location() const{
+bool properties::get_highlight() const {
+    return highlighted;
+}
+string properties::get_location() const {
     return location;
 }
-
-bool properties::get_highlight() const{
-    return highlighted;
+bool properties::get_furniture()
+{
+    return furniture;
+}
+int properties::get_area()
+{
+    return area;
+}
+int properties::get_rooms()
+{
+    return rooms;
+}
+bool properties::get_approval() {
+    return approved;
 }
