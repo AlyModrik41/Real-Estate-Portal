@@ -82,18 +82,21 @@ bool properties::get_highlight() const {
 string properties::get_location() const {
     return location;
 }
-bool properties::get_furniture()
+bool properties::get_furniture() const
 {
     return furniture;
 }
-int properties::get_area()
+int properties::get_area() const
 {
     return area;
 }
-int properties::get_rooms()
+int properties::get_rooms()const
 {
     return rooms;
 }
-bool properties::get_approval() {
+bool properties::get_approval() const{
     return approved;
+}
+int properties::get_id() const{
+    return id;
 }
