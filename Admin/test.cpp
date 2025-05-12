@@ -18,39 +18,61 @@ void showAdminMenu() {
 int main(int argc, char *argv[]) {
     //multi set that saves the properties sorted using pointer function
 unordered_map<int, vector<properties> > listOfProperties;
-//    char n;
-//    bool check=false;
-//    while (true) {
-//        showAdminMenu();
-//        cin>>n;
-//        if (!(n>='0'&&n<='4')) {
-//            cout<<"Invalid input please try again"<<endl;
-//        }else{
-//            switch (n) {
-//                case '1':admin::add_prop(property_set);
-//                break;
-//                case '2':admin::update_prop();
-//                break;
-//                case '3':admin::delete_prop();
-//                break;
-//                case '4':admin::all_prop(property_set);
-//                break;
-//                case '0':
-//                    check=true;
-//                         break;
-//            }
-//            if (check) break;
-//        }
-//    }
-
-/*int id_counter = 0;*/
-    int choice;
+   char n;
+   bool check=false;
+    int choice,id;
     user obj;
 
+
+/*int id_counter = 0;*/
+   
+
     
-  
-while (true)
+  while (true)
+  {
+	
+   while (true) {
+       showAdminMenu();
+       cin>>n;
+       if (!(n>='0'&&n<='5')) {
+           cout<<"Invalid input please try again"<<endl;
+       }else{
+           switch (n) {
+            //    case '1':admin::add_prop(property_set);
+            //    break;
+            //    case '2':admin::update_prop();
+            //    break;
+            //    case '3':admin::delete_prop();
+            //    break;
+            //    case '4':admin::all_prop(property_set);
+            //    break;
+               case '0':
+                   check=true;
+                        break;
+			   case '5':
+               obj.filter_search(6, listOfProperties);
+                    cout << "Choose Property to approve" << endl;
+                    cout<<"enter the id: \n";
+					cin >> id;
+                    for (auto it = listOfProperties.begin(); it != listOfProperties.end(); it++) {
+						for (auto prop:it->second)
+						{
+							if (id==prop.get_id())
+							{
+								cout<<"test";
+								prop.set_approval(true);
+							}
+							
+						}
+                    }
+                        break;
+           }
+           if (check) break;
+       }
+   }
+   while (true)
 {
+	
 
 	obj.ShowUserMenu();
 	cin >> choice;
@@ -87,6 +109,7 @@ while (true)
 				break;
 			}
 		}
+		//admin::all_prop(listOfProperties);
 		obj.filter_search(filter, listOfProperties);
 
 	}
@@ -94,6 +117,9 @@ while (true)
 	{
 		break;
 	}
+  }
+  
+
 }
 return 0;
 }

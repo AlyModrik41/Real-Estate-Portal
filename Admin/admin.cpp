@@ -21,7 +21,7 @@ admin::admin() {
 admin::~admin() {
 }
 
-void admin::add_prop(map<int, vector<properties>>& property_map) {
+void admin::add_prop(map<int, vector<properties> >& property_map) {
     int owner_id, price, rooms, area;
     bool furniture;
     string location, owner;

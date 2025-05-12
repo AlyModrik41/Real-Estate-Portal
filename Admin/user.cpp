@@ -85,7 +85,7 @@ properties user::add_prop()
 	}
 
 	properties temp(price, rooms, area, furniture, this->name, location);
-	temp.set_approval(true);
+	temp.set_approval(false);
 	return temp;
 }
 
@@ -343,37 +343,30 @@ void user::filter_search(int filter, unordered_map<int, vector<properties>> list
 		}
 
 	}
-	// else if (filter == 6) {
-	// 	int count = 1;
-	// 	for (auto it = listOfProperties.begin(); it != listOfProperties.end(); it++)
-	// 	{
-	// 		if (it->second.get_approval() == false) {
-	// 			cout << "========================================\n" << count++ << ":\n";
-	// 			cout << "Price   : " << it->second.get_price() << "$\n";
-	// 			cout << "Location: " << it->second.get_location() << "\n";
-	// 			cout << "Area   : " << it->second.get_area() << " meters\n";
-	// 			cout << "Rooms   : " << it->second.get_rooms() << "\n";
-	// 			cout << "Owner   : " << it->second.get_owner() << "\n";
-	// 			cout << "Furniture   : ";
-	// 			if (it->second.get_furniture() == true)
-	// 			{
-	// 				cout << "YES" << "\n";
-	// 			}
-	// 			else
-	// 			{
-	// 				cout << "NO" << "\n";
-	// 			}
-	// 			cout << "========================================\n";
-	// 		}
-	// 	}
-	// }
+	else if (filter == 6) {
+		int count = 1;
+		for (auto it = listOfProperties.begin(); it != listOfProperties.end(); it++)
+		{
+
+			
+				for (int i = 0;i<it->second.size();i++)
+				{
+
+					if (!it->second[i].get_approval())
+					{
+						display_property(it->first, it->second[i]);
+					}
+				}
+			
+		}
+	}
 
 }
 
 
 void user::display_property(int user_id, properties prop)
 {
-	cout << "========================================\n" << user_id << prop.get_id() << ":\n";
+	cout << "========================================\n" << user_id <<"props:"<< prop.get_id() << ":\n";
 	cout << "Price   : " << prop.get_price() << "$\n";
 	cout << "Location: " << prop.get_location() << "\n";
 	cout << "Area   : " << prop.get_area() << " meters\n";
