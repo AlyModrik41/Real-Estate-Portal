@@ -1,8 +1,11 @@
 #include "admin.h"
 #include "properties.h"
 #include <stdio.h>
-using namespace std;
+#include <string>
 #include<map>
+#include<unordered_map>
+
+using namespace std;
 /*Edits:
 1- property list type(unorderd map of id's and properties)
 
@@ -21,7 +24,7 @@ admin::admin() {
 admin::~admin() {
 }
 
-void admin::add_prop(map<int, vector<properties> >& property_map) {
+void admin::add_prop(unordered_map<int, vector<properties> >& property_map) {
     int owner_id, price, rooms, area;
     bool furniture;
     string location, owner;

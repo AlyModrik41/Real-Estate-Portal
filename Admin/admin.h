@@ -7,6 +7,7 @@
 #include <map>
 #include <vector>
 #include "properties.h"
+#include<unordered_map>
 using namespace std;
 class admin {
   static const string username;
@@ -16,7 +17,7 @@ public:
 
 
 
-  static void add_prop(map<int,vector<properties> >& property_map);
+  static void add_prop(unordered_map<int,vector<properties> >& property_map);
   static void delete_prop(map<int, vector<properties>>& property_map);
   static void update_prop(map<int,  vector<properties>>& property_map);
   static void all_prop(map<int,    vector<properties>>& property_map);

@@ -1,0 +1,3 @@
+C:/Users/Ali/source/repos/Real-Estate-Portal/Admin/out/build/x64-Debug/CMakeFiles/Admin.dir
+C:/Users/Ali/source/repos/Real-Estate-Portal/Admin/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Ali/source/repos/Real-Estate-Portal/Admin/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

@@ -22,6 +22,7 @@ unordered_map<int, vector<properties> > listOfProperties;
    bool check=false;
     int choice,id;
     user obj;
+	int user_id;
 
 
 /*int id_counter = 0;*/
@@ -52,19 +53,20 @@ unordered_map<int, vector<properties> > listOfProperties;
 			   case '5':
                obj.filter_search(6, listOfProperties);
                     cout << "Choose Property to approve" << endl;
-                    cout<<"enter the id: \n";
+                    cout<<"enter the user id: \n";
+					cin >> user_id;
+					cout << "Enter The Property Id:" << endl;
 					cin >> id;
                     for (auto it = listOfProperties.begin(); it != listOfProperties.end(); it++) {
-						for (auto prop:it->second)
-						{
-							if (id==prop.get_id())
-							{
-								cout<<"test";
-								prop.set_approval(true);
-							}
-							
+						if (user_id == it->first) {
+							it->second[id].set_approval(true);
+							break;
+						}
+						else {
+							cout << "There is no User with This id" << endl;
 						}
                     }
+					cout << "Approved Successfully!!" << endl;
                         break;
            }
            if (check) break;

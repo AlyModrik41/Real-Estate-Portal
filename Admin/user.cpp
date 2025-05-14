@@ -100,7 +100,7 @@ void user::filter_search(int filter, unordered_map<int, vector<properties>> list
 			{
 				for (int i = 0;i<it->second.size();i++)
 				{
-					if (it->second[i].get_approval())
+					if (it->second[i].get_approval()==true)
 					{
 						display_property(it->first, it->second[i]);
 					}
